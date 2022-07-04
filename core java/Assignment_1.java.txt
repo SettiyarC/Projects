@@ -1,0 +1,127 @@
+import java.util.Scanner;
+class X
+{
+	Scanner sc=new Scanner(System.in);
+	int id;
+	String name;
+	int age;
+	int salary;
+	String desig;
+	void display()
+	{
+		System.out.println("1). Create");
+		System.out.println("2). Dispaly");
+		System.out.println("3). Raise Salary");
+		System.out.println("4). Exit");
+		System.out.println("Choose an option?");
+	}
+	void input()
+	{
+		System.out.println("Enter your id:");
+		 id=sc.nextInt();
+		System.out.println("Enteryour name:");
+		name=sc.next();
+		System.out.println("ENter your age: ");
+		age=sc.nextInt();
+		System.out.println("ENter your salary:");
+		salary=sc.nextInt();
+		System.out.println("Enter your Designation");
+		String desig=sc.next();
+		Deta d=new Deta(id,name,age,salary,desig);
+		d.deta();
+	}
+}
+class Y extends X
+{
+	void dis()
+	{
+		System.out.println("1.CLERK");
+		System.out.println("2.DEV");
+		System.out.println("3.MANAGER");
+		System.out.println("4.TESTER");
+		System.out.println("5.EXIT");
+		System.out.println("choose your choice");
+	}
+}
+
+class Deta extends X
+{
+	
+	
+	As a =new As();
+	X x=new X();
+	Deta()
+	{
+		
+	}
+	Deta(int id,String name,int age,int salary,String desig)
+	{
+		this.id=id; 
+		this.name=name; 
+		this.age=age;
+		this.salary=salary;
+		this.desig=desig;
+	}
+	
+
+	void deta()
+	{
+	
+		System.out.println("id:"+id);
+		System.out.println("Name:"+name);
+		System.out.println("Age:"+age);
+		System.out.println("Salary:"+salary);
+		System.out.println("Designation:"+desig);
+	}
+	void clsalary()
+	{
+		int clsal=5000;
+		x.input();
+		
+		System.out.println("Clerk salary has raised by\n"
+					+ " 5000, Hence your total salary is:"+ (x.salary+clsal));	
+	}
+	void testsalary()
+	{
+		int testsal=1000;
+		x.input();
+	
+		System.out.println("Tester salary has raised by\n "
+		+ "1000, Hence your total salary is:"+(x.salary+testsal));
+		
+		
+	}
+	void devsalary()
+	{
+		int devsal=20000;
+		x.input();
+		System.out.println("Tester salary has raised by\n"
+		+ " 20000 ,Hence your total salary is:"+(x.salary+devsal));
+		
+		
+	}
+	void mangsalary()
+	{
+		int mangsal=30000;
+		x.input();
+		System.out.println("Tester salary has raised by\n"
+		+ " 30000 ,Hence your total salary is:"+(x.salary+mangsal));
+		
+		
+	}
+	
+}
+class Emp
+{
+	X x=new X();
+	void emp()
+	{
+		System.out.println("------EMPLOYEES------");
+		System.out.println("clerk");
+		System.out.println("Dev");
+		System.out.println("Manager");
+		System.out.println("Tester");
+		x.input();
+	}
+	
+}

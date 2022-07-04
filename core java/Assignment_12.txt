@@ -1,0 +1,77 @@
+import java.util.Scanner;
+public class As 
+{
+	public static void main(String [] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int ch1,ch2;
+		X x=new X();
+		x.display();
+		int ch=sc.nextInt();
+		Y y=new Y();
+		
+		Deta d=new Deta();
+		
+		if(ch==1)
+		{
+			y.dis();
+			ch1=sc.nextInt();
+		
+			switch(ch1) 
+			{
+				case 1: x.input();
+						break;
+				case 2: x.input();
+						break;
+				case 3:	x.input();
+						break;
+				case 4: x.input();
+						break;
+				case 5:
+						y.display();
+						ch2=sc.nextInt();
+						x.input();
+					break;
+				
+			}
+		}
+		if(ch==2)
+		{
+			Emp e=new Emp();
+			e.emp();
+		
+			
+		}
+		if(ch==3)
+		{
+			y.dis();
+			ch2=sc.nextInt();
+			switch(ch2)
+			{
+			case 1:
+					d.clsalary();
+					break;
+			case 2: 
+					d.devsalary();
+					break;
+			case 3:
+					d.mangsalary();
+					break;
+			case 4: 
+					d.testsalary();
+					break;
+			case 5: 	y.display();
+					ch2=sc.nextInt();
+					x.input();
+					break;
+			
+					
+			}
+		}
+		if(ch==4)
+		{
+			System.exit(0);
+		}
+	}
+
+}

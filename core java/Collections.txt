@@ -1,0 +1,158 @@
+import java.util.*;
+interface I 
+{
+	
+}
+
+abstract class Hosp
+{
+	String patient_name;
+	int age;
+	String disease;
+	String doctor;
+	String nurse;
+	int admission;
+	int amount;
+	Scanner sc=new Scanner(System.in);
+	Hosp()
+	{
+		
+		System.out.print("\n Enter patient name :");
+		patient_name=sc.nextLine();
+		System.out.print("\n Enter  patient Age :");
+		age=sc.nextInt();
+		System.out.println("Enter patient disease");
+		disease=sc.next();
+		System.out.println("how many days ago he/she admitted");
+		admission=sc.nextInt();
+		
+	}
+	public void display()
+	{
+		System.out.println("\nNAME:"+patient_name+ "\nAGE:"+age+"\n Disease:"+disease+"\nAdmitted days :"+admission+"\nDoctor appointed:"+doctor+"\nNurse appointed:"+nurse);	
+	}
+	public abstract void observation();	
+	
+	
+}
+
+final class Doctor extends Hosp 
+{
+	public Doctor()
+	{
+		doctor="Ajay";
+		nurse="Melissa";
+		
+	}
+	public void observation()
+	{
+		System.out.println(" Patient needs to be in observation under doctor:"+doctor+" for extra 4 days");
+		
+	}
+}
+
+final class Nurse extends Hosp
+{
+	public Nurse()
+	{
+		doctor="Ajay";
+		nurse="Melissa";
+	}
+	public void observation()
+	{
+		
+		System.out.println(" Patient needs to be in observation under Nurse:"+nurse+" for extra 2 days");
+		
+	}
+}
+
+
+
+public class Demo1
+{
+	public static void main(String args[])
+	{
+		int ch1=0,ch2=0;
+		Doctor d;
+		ArrayList<Hosp> list=new ArrayList<Hosp>();
+		
+		do
+		{
+			System.out.println("--------------------------------");
+			System.out.println("1.create");
+			System.out.println("2.Display");
+			System.out.println("3.Observation Period");
+			System.out.println("4.Exit");
+			System.out.println("--------------------------------");
+			System.out.println("Enter your Choice: ");
+			Scanner sc1=new Scanner(System.in);
+			ch1=sc1.nextInt();
+
+			if(ch1==1)
+			{
+			do
+			{
+				System.out.println("--------------------------------");
+				System.out.println("1.Doctor");
+				System.out.println("2.Nurse");
+				System.out.println("3.Exit");
+				System.out.println("--------------------------------");
+				System.out.println("Enter your Choice: ");
+				Scanner sc2=new Scanner(System.in);
+				ch2=sc2.nextInt();
+				switch(ch2)
+				{
+					case 1:
+						
+						list.add( new Doctor() );
+						
+						break;
+						
+					case 2:
+						list.add(new Nurse());
+						
+						break;
+					
+					case 3:
+
+						System.out.println("--------------------------------");
+						System.out.println("1.create");
+						System.out.println("2.Display");
+						System.out.println("3.Observation Period");
+						System.out.println("4.Exit");
+						System.out.println("--------------------------------");
+						System.out.println("Enter your Choice: ");
+						Scanner sc3=new Scanner(System.in);
+						ch1=sc3.nextInt();
+
+						
+						break;
+					}
+			}
+			while(ch2!=4);
+		}
+		if(ch1==2)
+		{
+			Iterator i=list.iterator();
+			while(i.hasNext())
+			{
+				Hosp x=(Hosp) i.next();
+				x.display();
+			}
+			
+		}
+		if(ch1==3)
+		{
+			Iterator n=list.iterator();
+			while(n.hasNext())
+			{
+				
+				Hosp h=(Hosp) n.next();
+				h.observation();
+			}
+		}
+	}
+		while(ch1!=4);
+		
+	}
+}
