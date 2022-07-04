@@ -1,0 +1,219 @@
+					
+							GIT NOTES
+
+
+GIT: Git is a DevOps tool used for source code management. 
+	It is a free version control system used to handle small aswell as very large projects efficiently.
+	Git is used to tracking changes in the source code, enabling multiple developers to work together on non-linear development.
+	In addition to software version control, Git is used for other applications including content management.
+
+
+GITHUB: GitHub is a feature also great open-source community. 
+		Since it is a cloud-based tool, the code is visible across the entire client organization, facilitating every participant's contributions.
+
+
+NEED OF GITHUB FOR USING GIT:	 Git lets you create repositories and push local changes. 
+				It lets you host these repositories to the cloud so that it can be shared publically and privately with anyone.
+
+
+VERSION CONTROL SYSTEM OF GIT:	A version control system is a software that tracks changes to a file or set of files over time so that you can recall specific versions later.
+				It also allows you to work together with other programmers.
+				It  is a collection of software tools that help a team to manage changes in a source code. 
+				It uses a special kind of database to keep track of every modification to the code.
+
+	-Git is a distributed version control system where each user can make changes to an entire repository on their system. 
+	It uses the command line and with git, it’s easy to undo changes back and forth with a precise explanation of the changes that are made. 
+	It has the ability of:
+
+		1. Keeping a track of the changes i.e. different versions of the same file.
+		2. It also keeps a record of all the files present in a project.
+		3. Comparing and analyzing different codes with a detailed explanation.
+
+
+
+TYPES OF VERSION CONTROL SYSTEMS: Version control enables multiple people to simultaneously work on a single project.
+				  Each person edits his or her own copy of the files and chooses when to share those changes with the rest of the team. 
+				  Thus, temporary or partial edits by one person do not interfere with another person's work.
+					There are mainly three version conrol system.
+				
+					1. Local Version Control Systems.
+					2. Centralized Version Control Systems.
+					3. Distributed Version Control Systems.
+
+	1. Local Version Control Systems: A local version control system is a local database located on your local computer, in which every file change is stored as a patch. 
+					  Every patch set contains only the changes made to the file since its last version.
+					  It is one of the simplest forms and has a database that kept all the changes to files under revision control.
+			
+				- The localized version control method is a common approach because of its simplicity.
+				- But this approach leads to a higher chance of error.
+				- To deal with this issue, programmers developed local VCSs that had a simple database. 
+				- Such databases kept all the changes to files under revision control. 
+				- A local version control system keeps local copies of the files.
+
+
+	2.  Centralized Version Control Systems: The developers needed to collaborate with other developers on other systems. The localized version control system failed in this case.
+						 To deal with this problem, Centralized Version Control Systems were developed.
+						 Centralized version control systems have many benefits, especially over local VCSs.
+
+				- Everyone on the system has information about the work what others are doing on the project.
+				- Administrators have control over other developers.
+				- It is easier to deal with a centralized version control system than a localized version control system.
+				- A local version control system facilitates with a server software component which stores and manages the different versions of the files.
+
+
+	3. Distributed Version Control Systems: Centralized Version Control System uses a central server to store all the database and team collaboration. 
+						But due to single point failure, which means the failure of the central server, developers do not prefer it.
+						Next, the Distributed Version Control System is developed.
+						In a Distributed Version Control System the user has a local copy of a repository.
+						So, the clients don't just check out the latest snapshot of the files even they can fully mirror the repository. 
+						The local repository contains all the files and metadata present in the main repository.
+						
+
+GIT ACCESS:
+		1. Open the command program on your computer. 
+		2. Install git bash from yor browser.
+		3. Type git and hit Enter. 
+		4. If it says command bash: git: command not found , then recheck with the download.
+		5.  Git for Windows comes with its own command prompt (Git Bash) that, besides git command. 
+
+
+LOCAL GIT ACCESS:
+  		
+			1. Determine the appropriate repository.
+			2. Fork the repository to your GitHub account.
+			3. Choose a local folder for the cloned files.
+			4. Clone the repository to your local machine.
+			5. Configure the upstream remote value.
+
+
+GIT REPOSITORY:
+		A Git repository tracks and saves the history of all changes made to the files in a Git project. 
+		It saves this data in a directory called . git , also known as the repository folder.
+	 	Git uses a version control system to track all changes made to the project and save them in the repository.
+
+
+
+CREATING GIT REPO:
+			To create a new repo, you'll use the git init command. 
+			Git init is a one-time command you use during the initial setup of a new repo. 
+			Executing this command will create a new .git subdirectory in your current working directory. This will also create a new main branch. 
+	STEPS:
+
+			1. Create a directory to contain the project.
+			2. Go into the new directory.
+			3. Type git init .
+			4. Write some code.
+			5. Type git add to add the files (see the typical use page).
+			6. Type git commit .
+			
+				
+GIT COMMANDS:
+
+		1. GIT INIT:
+			
+			The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository.
+			Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.	
+
+			- By default, git init will initialize the Git configuration to the git subdirectory path. 
+			- The subdirectory path can be modified and customized if you would like it to live elsewhere. 
+			- You can set the $GIT_DIR environment variable to a custom path and git init will initialize the Git configuration files there.
+			- Additionally you can pass the --separate-git-dir argument for the same result.
+			- Compared to SVN, the git init command is an incredibly easy way to create new version-controlled projects. 
+			- Git doesn’t require you to create a repository, import files, and check out a working copy.
+			-  Additionally, Git does not require any pre-existing server or admin privileges.
+			-  All you have to do is cd into your project subdirectory and run git init, and you'll have a fully functional Git repository.
+			
+
+
+		2. GIT COMMIT:
+    			
+				The git commit command captures a snapshot of the project's currently staged changes.
+				 Committed snapshots can be thought of as “safe” versions of a project—Git will never change them unless you explicitly ask it to.
+
+				- Adding commits keep track of our progress and changes as we work. 
+				- Git considers each commit change point or "save point". 
+				- It is a point in the project you can go back to if you find a bug, or want to make a change.
+
+
+				
+		3. GIT PUSH:
+			
+				The git push command is used to upload local repository content to a remote repository. 
+				Pushing is how you transfer commits from your local repository to a remote repo. 
+				It's the counterpart to git fetch , but whereas fetching imports commits to local branches, pushing exports commits to remote branches.
+				
+			STEPS:
+			
+				1. Creating a new repository. 
+				2. Open your Git Bash. ...
+				3. Create your local project in your desktop directed towards a current working directory. ...
+				4. Add the file to the new local repository. ...
+				5. Add the URL copied, which is your remote repository to where your local content from your repository is pushed.
+
+
+		4. GIT PULL:
+
+				The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. 
+				Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows.	
+				- Git pull is a Git command used to update the local version of a repository from a remote. 
+				- We use Git pull when one is working alone on the branch. 
+				- Since there is no point in reviewing your changes again, you can directly pull them to your repository. 
+				- Using Git pull command is no different than using Git merge command. 
+				- Just keep in mind that git pull is a short cut to git fetch and git merge.
+
+		5. GIT FETCH:
+				
+				Git fetch is a primary command used to download contents from a remote repository.
+				Git fetch is used in conjunction with git remote , git branch , git checkout, and git reset to update a local repository to the state of a remote.
+				- The "git fetch" command is used to pull the updates from remote-tracking branches. 
+				- Additionally, we can get the updates that have been pushed to our remote branches to our local machines.
+				-  As we know, a branch is a variation of our repositories main code, so the remote-tracking branches are branches that have been set up to pull and push from remote repository.
+				- git fetch really only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files.
+				-  Fetch is great for getting a fresh view on all the things that happened in a remote repository.
+				- Due to it's "harmless" nature, you can rest assured: fetch will never manipulate, destroy, or screw up anything. This means you can never fetch often enough.
+				
+		6. GIT PUSH:
+ 
+			Git stash is a built-in command with the distributed Version control tool in Git that locally stores all the most recent changes in a workspace and resets the state of the workspace to the prior commit state. 
+			A user can retrieve all files put into the stash with the git stash pop and git stash apply commands.
+			- Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. 
+			- The command saves your local modifications away and reverts the working directory to match the HEAD commit.
+
+				NOTE:	We use git stash to store our changes when they are not ready to be committed, but we must change to a different branch.
+		
+		7. GIT AMMEND:
+
+				The git commit --amend command is a convenient way to modify the most recent commit. 
+				It lets you combine staged changes with the previous commit instead of creating an entirely new commit.
+				It can also be used to simply edit the previous commit message without changing its snapshot.
+
+
+				STEPS:
+					1. The author of the commit. Perform: git commit --amend --author="Author Name <email@address.com>"
+					2. The date of the commit. For current date and time. ...
+					3. The commit message. Perform: git commit --amend -m "New Commit Message"
+
+
+					- It combines changes in the staging environment with the latest commit, and creates a new commit.
+	
+					- This new commit replaces the latest commit entirely.
+
+		8. GIT STATUS:
+ 	
+				he git status command displays the state of the working directory and the staging area.
+				 It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git.
+
+				- Displays paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git.
+				- When we create a file in the repository, the state of the repository changes to status command.
+
+		9. GIT RESET:
+
+				The git reset command is used to reset the changes. The git reset command has three core forms of invocation.
+				- No matter what form of reset with a commit you invoke, this is the first thing it will always try to do. With reset --soft, it will simply stop there.
+				- Now take a second to look at that diagram and realize what happened: it essentially undid the last git commit command. 
+				- When you run git commit, Git creates a new commit and moves the branch that HEAD points to up to it. 
+				- When you reset back to HEAD~ (the parent of HEAD), you are moving the branch back to where it was, without changing the index or working directory. 
+				- You could now update the index and run git commit again to accomplish what git commit --amend.
+
+
+		
